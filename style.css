@@ -75,7 +75,7 @@ header{
 
 @media screen and (max-width: 774px){
 	.urlEntregaIcon{
-		top: 20px;
+		top: 200px;
 		position: absolute;
 	}
 
@@ -84,10 +84,9 @@ header{
 	}
 
 	.botonCompra{
-		position: absolute;
 		bottom: 10px;
 		padding:7px 35px;
-		margin-top: 55px;
+		margin-top: 60px;
 	}
 }
 
