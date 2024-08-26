@@ -349,7 +349,7 @@ article img{
 	.redesSociales{
 		left: 0px;
 		margin: 0px 50px;
-		flex-direction: row;
+		flex-direction: column;
 	}
 	
 	.redesSociales h1{
