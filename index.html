@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>FLUXA</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=103940&format=png&color=000000" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+    <body>
+        <header> 
+                    <a class="urlEntregaIcon" href="#envios" ><img class="entregaIcon"
+                     src="entregaIcon.gif" alt="Envios"></a>
+
+                    <h1 class="tituloEnvios">ENVÍOS A <br> TODO ROSARIO</h1>
+
+        </header>
+
+
+        <section class="tiposEnvios" id="envios">
+             
+            <button class="enviosBotonJS" onclick="mostrarPaquetes()">ENVÍOS</button>
+
+            <h1 class="enviosH1">TIPOS DE ENVÍOS</h1>
+            
+            <div class="boxTiposEnvios" id="paquetes">
+                <a href=""><article>
+                    <img src="https://img.icons8.com/plasticine/100/lightweight.png" alt="Ligero" draggable="false">
+                        <div class="textoBoxArticle"><h2>Ligeros</h2>
+                    <p>Menor a 50kg</p></div>
+                </article> </a>
+                
+                <a href=""><article>
+                    <img src="https://img.icons8.com/glyph-neue/100/heavy.png" alt="Pesados" draggable="false">
+                        <div class="textoBoxArticle"><h2>Pesados</h2>
+                    <p>Mayor a 50kg</p></div>
+                </article> </a>
+
+                <a href=""><article>
+                    <img src="https://img.icons8.com/ios/100/fragile.png" alt="Fragiles" draggable="false">
+                        <div class="textoBoxArticle"><h2>Fragiles</h2>
+                    <p>Productos propenso sufrir daños o roturas fácilmente</p></div>
+                </article> </a>
+                
+                <a href=""><article>
+                    <img src="https://img.icons8.com/ios/100/furniture.png" alt="Muebles" draggable="false">
+                        <div class="textoBoxArticle"><h2>Muebles</h2>
+                    <p>Envío de muebles grandes</p></div>
+                </article> </a>
+                
+                <a href=""><article>
+                    <img src="https://img.icons8.com/ios-filled/100/microwave.png" alt="Electrodomesticos" draggable="false">
+                        <div class="textoBoxArticle"><h2>Electrodomesticos</h2>
+                    <p>Transporte de electrodomésticos</p></div>
+                </article> </a>
+                
+                <a href=""><article>
+                    <img src="https://img.icons8.com/ios/100/submit-document.png" alt="Documentación" draggable="false">
+                        <div class="textoBoxArticle"><h2>Documentación</h2>
+                    <p>Entrega de documentos</p></div>
+                </article> </a>
+                
+               <a href=""><article>
+                    <img src="https://img.icons8.com/ink/100/basketball-jersey.png" alt="Indumentaria" draggable="false">
+                        <div class="textoBoxArticle"><h2>Indumentaria</h2>
+                    <p>Envío de ropa</p></div>
+                </article> </a>
+                
+                <a href=""><article>
+                    <img src="https://img.icons8.com/ios-filled/100/pallet.png" alt="Pallet" draggable="false">
+                        <div class="textoBoxArticle"><h2>Pallet</h2>
+                    <p> Transporte en pallets</p></div>
+                </article> </a>
+            </div>
+    
+        </section>
+
+        <footer>
+            <div class="sobreNosotros">
+                <h1>FLUXA INFORMACIÓN</h1>
+                    
+                <div class="columnSobreNostros">
+                    <h3>Ubicación</h3>
+                        <p>Rosario,Santa Fe, Argentina</p>
+                    <h3>Email</h3>
+                        <p>FluxaEnvios@gmail.com</p>
+                </div>    
+            </div>
+
+            <div class="redesSociales">
+                <h1>REDES</h1>
+
+                <a href="#" target="_blank"><img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/100/external-instagram-photo-and-video-sharing-social-networking-service-owned-by-facebook-logo-color-tal-revivo.png" alt="Instagram" draggable="false"><span>Instagram</span></a> 
+            
+                <a href="#" target="_blank"><img src="https://img.icons8.com/color/100/whatsapp--v1.png" alt="WhatsApp" draggable="false"><span>Whatsapp</span></a> 
+
+           
+                <a href="#" target="_blank"><img src="https://img.icons8.com/color/100/facebook-new.png" alt="Facebook" draggable="false"><span>Facebook</span></a> 
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script>
+            function mostrarPaquetes() {
+                const paquetes = document.getElementById('paquetes');
+                paquetes.style.display = 'flex'; 
+            }
+        </script>
+
+    </body>
+</html>
