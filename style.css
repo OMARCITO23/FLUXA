@@ -1,0 +1,368 @@
+*{
+	margin: 0;
+    font-family: "Oswald", sans-serif;
+    user-select: none; 
+	text-decoration:none;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar{
+	width: 4px;
+	background: black;
+}
+
+*::-webkit-scrollbar-thumb{
+	background: #fd9800;
+	border-radius: 5px;
+}
+
+body{
+	background-color: #ffffff;
+}
+
+header{
+	filter: brightness(90%);
+	background:linear-gradient(90deg, rgba(173,112,31,0.31626417656906514) 0%, rgba(138,130,66,0) 51%, rgba(173,112,31,0.31626417656906514) 100%), url(fondoEnviosHeader.jpg);
+	background-size: cover;
+	width: 100%;
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-attachment: fixed;
+	color: #fff;
+	box-shadow: 0px 2px 12px 0px #000000;
+}
+
+footer{
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	padding: 50px;
+	background:#b9ebf4;
+	margin: auto;
+	border-top:5px double #000;
+}
+
+footer img{
+	width: 80px;
+}
+
+article{
+	color: #000;
+	width: 250px;
+	height: 250px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+	background-color: #ffc400;
+	border-radius: 20px;
+	box-shadow: #000 0px 3px 8px 0px;
+	cursor: pointer;
+	text-align: center;
+	font-size: 0.9em;
+	transition: all 300ms;
+}
+
+article:hover{
+	border-bottom: 3.5px inset #CCC600;
+}
+
+article img{
+	width: 130px;
+	filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+}
+
+/* header */
+
+.tituloEnvios{
+	display: inline;
+    font-size: 5em;
+    text-align: center;
+    margin-top: 50px;
+    text-shadow: #000 2px 3px 2px;
+}
+
+.urlEntregaIcon{
+    border-radius: 200px 200px 200px 200px;
+    padding: 10px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 2px 1px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 2px 1px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 2px 1px 0px rgba(0,0,0,0.75);
+}
+
+.entregaIcon{
+    pointer-events: none;
+}
+
+/* section - article */
+
+.enviosBotonJS{
+	display: none;
+}
+
+.tiposEnvios{
+	height: 100vh;
+	width: 85%;
+	background: #fff;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.tiposEnvios h1{
+	text-align: center;
+	color: #000;
+	font-size: 2em;
+	margin-bottom: 30px;
+}
+
+.boxTiposEnvios{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+/* footer */
+
+.sobreNosotros{
+	width: 35%;
+	height: auto;
+	background: #cbdfe2;
+	display: flex;
+	flex-direction: column;
+	margin-left: 2em;
+	padding: 20px;
+	border-radius: 20px;
+	box-shadow: 0px 0px 15px -3px rgba(0,0,0,1);
+}
+
+.columnSobreNostros{
+	display:flex;
+	flex-direction: column;
+}
+
+.sobreNosotros h1{
+	font-size: 1.5em;
+	color: #000000;
+	text-align: center;
+}
+
+.sobreNosotros p, .sobreNosotros h3{
+	font-size: 1.5em;
+	color: #000000;
+	padding: 10px;
+}
+
+
+.redesSociales{
+	display: flex;
+	flex-direction: column;
+	width: auto;
+	justify-content: center;
+	align-content: center;
+	margin: 0px 20px;
+}
+
+.redesSociales h1{
+	color: #000;
+	text-align: center;
+	text-shadow: #fff 1px 1px;
+}
+
+.redesSociales a{
+	display: flex;
+	align-items: center;
+	padding: 5px;
+	margin: 30px 0px 0px 0px;
+	font-size: 2em;
+}
+
+.redesSociales span{
+	color: #376580;
+	margin-left: 5px;
+}
+
+.redesSociales span:hover{
+	color: #0b537d;
+}
+
+.redesSociales img{
+	width: 2em;
+}
+
+@media screen and (max-width: 1280px){
+	footer{
+		flex-direction: column;
+		align-items: center;
+
+	}
+	
+	article{
+		width: 250px;
+		height: 150px;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+		text-align: left;
+	}
+
+	article img{
+		width: 60px;
+	}
+
+	article:hover{
+		border-bottom: none;
+	}
+
+	.tiposEnvios h1{
+		text-align: center;
+		color: #000;
+		font-size: 1.2em;
+		margin-bottom: 10px;
+	}
+
+	.textoBoxArticle{
+		font-size: 0.80em;
+	}
+
+	.tiposEnvios{
+		width: 100%;
+	}
+
+	.sobreNosotros h1{
+		font-size: 1em;
+	}
+	
+	.sobreNosotros p, .sobreNosotros h3{
+		font-size: 1em;
+	}
+
+	.redesSociales h1{
+		margin-top: 20px;
+	}
+}
+
+
+
+@media screen and (max-width: 774px){
+	.enviosBotonJS{
+		display: block;
+		box-shadow: 2px 2px 0px 0px #000000;
+		background:linear-gradient(to bottom, #8e83e1 5%, #52b6d1 100%);
+		display:inline-block;
+		cursor:pointer;
+		color:#ffffff;
+		font-family:Arial;
+		font-size:20px;
+		padding:18px 36px;
+		text-decoration:none;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	#paquetes{
+		display: none;
+	}
+
+	.enviosH1{
+		display: none;
+	}
+
+	.enviosBotonJS:hover {
+		background:linear-gradient(to bottom, #5cbf2a 5%, #44c767 100%);
+		background-color:#5cbf2a;
+	}
+	
+	.myButton {
+		box-shadow: 2px 2px 0px 0px #000000;
+		background:linear-gradient(to bottom, #44c767 5%, #5cbf2a 100%);
+		display:inline-block;
+		cursor:pointer;
+		color:#ffffff;
+		font-family:Arial;
+		font-size:20px;
+		padding:18px 36px;
+		text-decoration:none;
+	}
+	
+	
+			
+
+	header{
+		background:linear-gradient(90deg, rgba(173,112,31,0.31626417656906514) 0%, rgba(138,130,66,0) 51%, rgba(173,112,31,0.31626417656906514) 100%), url(fondoEnviosHeaderResposive.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+	}
+
+	footer{
+		align-items: start;
+	}
+
+	article{
+		width: 80vw;
+		height: 150px;
+		border-radius: 0px;
+		box-shadow: #000 0px 0px 0px 0px;
+		border-top:3px #000 dashed;
+		border-bottom:3px #000 dashed;
+		filter: grayscale(0%);
+		transition: none;
+	}
+
+	article img{
+		width: 50px;
+	}
+
+	article:hover{
+		border-bottom:3px #000 dashed;
+		border-right: none;
+	}
+
+	.tiposEnvios{
+		height: auto;
+	}
+
+	.tiposEnvios h1{
+		margin-top: 20px;
+	}
+
+	.tituloEnvios{
+		font-size: 3em;
+	}
+
+	.sobreNosotros{
+		width: 70vw;
+		margin: auto;
+		padding: 10px;
+		border-radius: 5px;
+		box-shadow: 0px 0px 10px -3px rgb(125, 125, 125);
+	}
+	.redesSociales{
+		left: 0px;
+		margin: 0px 50px;
+		flex-direction: column;
+	}
+	
+	.redesSociales h1{
+		display: none;
+	}
+	
+	.redesSociales a{
+		font-size: 1em;
+	}
+}
+
+
+
+
+
+

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>FLUXA</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=103940&format=png&color=000000" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 24px;
+        }
+
+        .botones {
+            margin: 20px 0;
+        }
+
+        .botones button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .botones button:hover {
+            background-color: #45a049;
+        }
+
+        form {
+            margin-top: 20px;
+            text-align: left;
+            display: inline-block;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #map {
+            margin-top: 20px;
+            height: 400px;
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>Selecciona tu clase de envío</h2>
+    <div class="botones">
+        <button onclick="selectEnvio('Estandar')">Envío Estándar</button>
+        <button onclick="selectEnvio('Express')">Envío Express</button>
+    </div>
+
+    <form id="formulario-envio">
+        <label for="direccion">Dirección de Envío:</label>
+        <input type="text" id="direccion" name="direccion" placeholder="Selecciona una ubicación en el mapa">
+    </form>
+
+    <div id="map"></div>
+
+    <script>
+        let map;
+        let marker;
+
+        function initMap() {
+            // Inicializa el mapa centrado en una ubicación por defecto
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: -34.6037, lng: -58.3816 }, // Buenos Aires, Argentina
+                zoom: 13
+            });
+
+            // Añade un marcador al mapa al hacer clic y actualiza el formulario
+            map.addListener('click', function(event) {
+                placeMarker(event.latLng);
+                geocodeLatLng(event.latLng);
+            });
+        }
+
+        function placeMarker(location) {
+            if (marker) {
+                marker.setPosition(location);
+            } else {
+                marker = new google.maps.Marker({
+                    position: location,
+                    map: map
+                });
+            }
+        }
+
+        function geocodeLatLng(latLng) {
+            const geocoder = new google.maps.Geocoder();
+            geocoder.geocode({ location: latLng }, function(results, status) {
+                if (status === 'OK') {
+                    if (results[0]) {
+                        document.getElementById('direccion').value = results[0].formatted_address;
+                    } else {
+                        alert('No se encontraron resultados');
+                    }
+                } else {
+                    alert('Geocodificación fallida debido a: ' + status);
+                }
+            });
+        }
+
+        function selectEnvio(tipo) {
+            alert('Has seleccionado el envío ' + tipo);
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+
+
+        <footer>
+            <div class="sobreNosotros">
+                <h1>FLUXA INFORMACIÓN</h1>
+                    
+                <div class="columnSobreNostros">
+                    <h3>Ubicación</h3>
+                        <p>Rosario,Santa Fe, Argentina</p>
+                    <h3>Email</h3>
+                        <p>FluxaEnvios@gmail.com</p>
+                </div>    
+            </div>
+
+            <div class="redesSociales">
+                <h1>REDES</h1>
+
+                <a href="#" target="_blank"><img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/100/external-instagram-photo-and-video-sharing-social-networking-service-owned-by-facebook-logo-color-tal-revivo.png" alt="Instagram" draggable="false"><span>Instagram</span></a> 
+            
+                <a href="#" target="_blank"><img src="https://img.icons8.com/color/100/whatsapp--v1.png" alt="WhatsApp" draggable="false"><span>Whatsapp</span></a> 
+
+           
+                <a href="#" target="_blank"><img src="https://img.icons8.com/color/100/facebook-new.png" alt="Facebook" draggable="false"><span>Facebook</span></a> 
+            </div>
+        </footer>
+    </body>
+</html>
